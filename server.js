@@ -10,7 +10,7 @@ let client;
 
 async function startTelegram() {
   client = new TelegramClient(
-    new (await import("telegram/sessions")).StringSession(""),
+    new (await import("telegram/sessions/index.js")).StringSession(""),
     Number(process.env.API_ID),
     process.env.API_HASH,
     { connectionRetries: 5 }
